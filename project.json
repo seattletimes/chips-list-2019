@@ -6,16 +6,16 @@
     },
     "live": {
       "bucket": "projects.seattletimes.com",
-      "path": "2017/sports/chips-list/"
+      "path": "2019/sports/chips-list/"
     }
   },
-  "title": "Chips List 2017: The top prospects in Washington state high-school football",
+  "title": "Chips List 2019: These are the top 100 football recruits in Washington state",
   "description": "The Seattle Times' annual Chips List reveals the top 100 football prospects in Washington state, including ratings for our blue, red and white chips.",
-  "url": "http://projects.seattletimes.com/2016/sports/chips-list/",
-  "slug": "chips-list-2017",
+  "url": "http://projects.seattletimes.com/2019/sports/chips-list/",
+  "slug": "chips-list-2019",
   "tags": [],
-  "image": "./assets/chipstzr.jpg",
+  "image": "./assets/ChipsList-TwitterCard.jpg",
   "production": true,
   "embedded": false,
-  "sheets": ["1JJxUP2jGSZHnjRN7x_PSg5BKgJCYaRxO5Vp_iQkW5w8"]
+  "sheets": ["1fiMZzxssdUG55m6tqWGCqVdvcgxYzyt3na5dw0pd0Ys"]
 }

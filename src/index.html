@@ -27,15 +27,15 @@
 
      </nav>
 
-     <h1><img src="./assets/chipslistheader.jpg" alt="2016 Chips List"></h1>
+     <h1><img src="./assets/chipslistheader.jpg" alt="2019 Chips List"></h1>
 
       <!-- <h1>2016 Chips List</h1> -->
 
-      <p class="welcome">The Seattle Times' annual Chips List reveals the top 100 football prospects in Washington state, as determined by reporter Jayda Evans with input from recruiting experts and high-school coaches. Use the searchable list below to meet our picks for 2017.</p>
+      <p class="welcome">The Seattle Times' annual Chips List reveals the top 100 football prospects in Washington state, as determined by reporter Jayda Evans with input from recruiting experts and high-school coaches. Use the searchable list below to meet our picks for 2019.</p>
 
       <p class="welcome">A blue-chip player is considered the cream of the recruiting crop &mdash; an athlete who could start and star at the Division I level in college. A red chipper is someone who could start in a major conference like the Pac-12. And the rest of our top prospects are white chippers.</p>
 
-      <p class="welcome">Be sure to also check out our <strong><a href="http://projects.seattletimes.com/2017/sports/uw-wsu-recruit-tracker/">2017 UW and WSU Recruiting Tracker</a></strong>.</p>
+      <p class="welcome">Be sure to also check out our <strong><a href="http://projects.seattletimes.com/2019/sports/uw-wsu-recruit-tracker/">2019 UW and WSU Recruiting Tracker</a></strong>.</p>
 
       <div  ng-app="chips-list" ng-cloak ng-controller="ChipsController">
 
@@ -81,17 +81,16 @@
 
         <div class="credits">
 
-          Reporting by <span class="credit-name">Jayda Evans</span><br/>
-          Production by <span class="credit-name">Sean Quinton</span> and <span class="credit-name">Audrey Carlsen</span><br/>
-          Photography by <span class="credit-name">Logan Riely</span>
+          Reporting by <span class="credit-name">Jayda Evans and Nathan Joyce</span><br/>
+          Production by <span class="credit-name">Evan Webeck</span>
 
         </div>
        <div class="links">
          <div class="links-header">More on high school sports in The Seattle Times:</div>
 
-         <a href="http://www.seattletimes.com/sports/high-school/">High School News</a> | <a href="http://seattletimes.sportngin.com/schedule/day/league_instance/31924?subseason=225972">Football Scores and Stats</a> | <a href="http://www.seattletimes.com/sports">Seattle Times Sports</a>
+         <a href="http://www.seattletimes.com/sports/high-school/">High School News</a> | <a href="https://twitter.com/seatimespreps">On Twitter</a> | <a href="http://www.seattletimes.com/sports">Seattle Times Sports</a>
        </div>
-       <div class="copyright">Copyright 2016 The Seattle Times</div>
+       <div class="copyright">Copyright 2019 The Seattle Times</div>
      </div>
 
      <div class="bottom-ad"><%= t.include("partials/_ad.html", { type: "bannerBottom" }) %>
@@ -108,7 +107,7 @@
     </footer>
 
     <script>
-      var chipsData = <%= JSON.stringify(json.ChipsList2017_Sheet1) %>;
+      var chipsData = <%= JSON.stringify(json.ChipsList2019_Sheet1) %>;
     </script>
     <script src="app.js"></script>
     <% if (json.project.production) { %>
