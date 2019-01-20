@@ -1,0 +1,21 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "heartbreak-hotel"
+    },
+    "live": {
+      "bucket": "projects.seattletimes.com",
+      "path": "2017/sports/chips-list/"
+    }
+  },
+  "title": "Chips List 2017: The top prospects in Washington state high-school football",
+  "description": "The Seattle Times' annual Chips List reveals the top 100 football prospects in Washington state, including ratings for our blue, red and white chips.",
+  "url": "http://projects.seattletimes.com/2016/sports/chips-list/",
+  "slug": "chips-list-2017",
+  "tags": [],
+  "image": "./assets/chipstzr.jpg",
+  "production": true,
+  "embedded": false,
+  "sheets": ["1JJxUP2jGSZHnjRN7x_PSg5BKgJCYaRxO5Vp_iQkW5w8"]
+}

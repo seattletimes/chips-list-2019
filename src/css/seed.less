@@ -1,0 +1,286 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@import "seattletimes";
+
+body {
+  font-family: @df-sans;
+}
+
+[ng-cloak] { opacity: 0 }
+
+.top-share-bar {
+  background: @df-off-black;
+  opacity: 0.95;
+  padding: 6px 8px 4px 8px;
+  position: relative;
+  z-index: 99;
+  margin-bottom: 10px;
+
+  .logo-top {
+    float: left;
+    margin-right: 10px;
+
+    img {
+      margin-top: 5px;
+      height: 20px;
+    }
+  }
+
+  &::after {
+    clear: both;
+    content: " ";
+    display: block;
+  }
+
+  .share-top {
+    float: right;
+
+    label {
+      background: @df-off-black !important;
+      color: @df-off-white !important;
+    }
+  }
+}
+
+
+nav.top-bar {
+  border-bottom: 1px solid @df-border-gray;
+  margin-bottom: 30px;
+
+  @media @mobile {
+    height: 40px;
+    background: white;
+    margin-bottom: 0px;
+    border-bottom: 0;
+  }
+
+  .logo {
+    position: relative;
+    top: 30px;
+    text-align: center;
+    display: block;
+
+    @media @mobile {
+      padding-top: 20px;
+      top: 0;
+    }
+
+    img {
+      box-sizing: content-box;
+      height: 30px;
+      background: white;
+      padding: 10px;
+
+      @media @mobile {
+        padding: 5px;
+        // height: 50px;
+      }
+    }
+  }
+}
+
+.outer {
+  max-width: 960px;
+  margin: auto;
+  padding: 5px;
+}
+
+.welcome {
+  font-size: 18px;
+  margin: auto;
+  // text-align: center;
+  padding: 10px 40px 10px 40px;
+
+  @media @mobile {
+    font-size: 16px;
+  }
+}
+
+.search-container {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 10px;
+
+  .search {
+    font-size: 16px;
+  }
+  input {
+    margin-left: 4px;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  th {
+    text-transform: uppercase;
+    border-bottom: 1px solid @df-light-gray;
+    padding: 6px 8px;
+    text-align: left;
+    font-size: 12px;
+
+    @media @mobile {
+      font-size: 9px;
+      padding: 2px 3px;
+    }
+  }
+
+  tr:nth-child(odd) td {
+    background: @df-off-white;
+  };
+
+  td {
+    padding: 6px 8px;
+    font-size: 14px;
+
+    @media @mobile {
+      font-size: 10px;
+      padding: 2px 3px;
+    }
+  }
+}
+
+.blue-chip {
+  color: #00008B;
+}
+
+.red-chip {
+  color: 	#8B0000;
+}
+
+.offers {
+  max-width: 340px;
+  font-size: 12px;
+
+  @media @mobile {
+    display: none;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+
+  &:hover {
+    background: @df-light-gray;
+  }
+}
+
+.selected {
+  background: @df-light-gray;
+
+  &.up::after {
+    font-size: 10px;
+    content: "\25BC";
+    padding-left: 4px;
+
+    @media @mobile {
+      font-size: 8px;
+    }
+  }
+  &.down::after {
+    font-size: 10px;
+    content: "\25B2";
+    padding-left: 4px;
+
+    @media @mobile {
+      font-size: 8px;
+    }
+  }
+}
+
+.no-results {
+  display: none;
+  font-style: italic;
+
+  &:first-child {
+    display: table-row;
+  }
+}
+
+.divider {
+  border-top: 4px solid @df-middle-gray;
+  padding-bottom: 8px;
+}
+
+.credits {
+  color: @df-middle-gray;
+  font-size: 0.7em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 16px 0 50px 0;
+
+  .credit-name {
+    font-weight: bold;
+  }
+
+  @media @mobile {
+    padding: 15px;
+  }
+}
+
+.links {
+  font-family: @df-sans;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px 0 10px 0;
+  font-weight: bold;
+}
+
+.copyright {
+  font-family: @df-sans;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 300;
+  color: @df-middle-gray;
+  padding-bottom: 15px;
+}
+
+.ad {
+  text-align: center;
+}
+
+.bottom-ad {
+  @media @mobile {
+    display: none;
+  }
+}
+
+footer {
+  background: @df-off-black;
+  opacity: 0.95;
+  padding: 6px 8px 4px 8px;
+  position: relative;
+  z-index: 99;
+  margin-top: 10px;
+  .logo {
+    float: left;
+    margin-right: 10px;
+
+    img {
+      margin-top: 5px;
+      height: 20px;
+    }
+  }
+
+  &::after {
+    clear: both;
+    content: " ";
+    display: block;
+  }
+
+  .share-bottom {
+    float: right;
+
+    label {
+      background: @df-off-black !important;
+      color: @df-off-white !important;
+    }
+  }
+}

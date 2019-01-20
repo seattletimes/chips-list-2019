@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <%= t.include("partials/_adHead.html") %>
+  </head>
+  <body>
+
+    <div class="top-share-bar">
+      <a class="logo-top" href="http://seattletimes.com">
+        <img src="./assets/st-logo.png">
+      </a>
+      <a class="share share-top"></a>
+    </div>
+
+    <div class="outer">
+
+      <%= t.include("partials/_ad.html", { type: "banner" }) %>
+
+      <nav class="top-bar">
+       <a class="logo" href="http://seattletimes.com">
+         <img src="./assets/seattletimes.svg">
+       </a>
+
+     </nav>
+
+     <h1><img src="./assets/chipslistheader.jpg" alt="2016 Chips List"></h1>
+
+      <!-- <h1>2016 Chips List</h1> -->
+
+      <p class="welcome">The Seattle Times' annual Chips List reveals the top 100 football prospects in Washington state, as determined by reporter Jayda Evans with input from recruiting experts and high-school coaches. Use the searchable list below to meet our picks for 2017.</p>
+
+      <p class="welcome">A blue-chip player is considered the cream of the recruiting crop &mdash; an athlete who could start and star at the Division I level in college. A red chipper is someone who could start in a major conference like the Pac-12. And the rest of our top prospects are white chippers.</p>
+
+      <p class="welcome">Be sure to also check out our <strong><a href="http://projects.seattletimes.com/2017/sports/uw-wsu-recruit-tracker/">2017 UW and WSU Recruiting Tracker</a></strong>.</p>
+
+      <div  ng-app="chips-list" ng-cloak ng-controller="ChipsController">
+
+        <div class="search-container">
+          <span class="search">Search:</span>
+          <input type="text" ng-model="searchText">
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th ng-repeat="header in headers" class="{{header.short}}" ng-click="sortTable(header)" ng-class="{clickable: header.short !== 'offers', down: selected == header && sortOrder == -1, up: selected == header && sortOrder == 1, selected: header == selected}">{{header.title}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="recruit in recruits | filter:searchText">
+              <td class="name">{{recruit.firstname}} {{recruit.lastname}}</td>
+              <td class="chip">
+                <span ng-if="recruit.chip == 'Blue'">
+                  <span class="blue-chip">Blue</span>
+                </span>
+                <span ng-if="recruit.chip == 'Red'">
+                  <span class="red-chip">Red</span>
+                </span>
+                <span ng-if="recruit.chip == 'White'">
+                  White
+                </span>
+              </td>
+              <td class="position">{{recruit.position}}</td>
+              <td class="height">{{recruit.height}}</td>
+              <td class="weight">{{recruit.weight}}</td>
+              <td class="school">{{recruit.school}}</td>
+              <td class="commitment">{{recruit.commitment}}</td>
+              <td class="comment">{{recruit.comment}}</td>
+            </tr>
+            <tr class="no-results">
+              <td colspan=100>No results found
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="divider"></div>
+
+        <div class="credits">
+
+          Reporting by <span class="credit-name">Jayda Evans</span><br/>
+          Production by <span class="credit-name">Sean Quinton</span> and <span class="credit-name">Audrey Carlsen</span><br/>
+          Photography by <span class="credit-name">Logan Riely</span>
+
+        </div>
+       <div class="links">
+         <div class="links-header">More on high school sports in The Seattle Times:</div>
+
+         <a href="http://www.seattletimes.com/sports/high-school/">High School News</a> | <a href="http://seattletimes.sportngin.com/schedule/day/league_instance/31924?subseason=225972">Football Scores and Stats</a> | <a href="http://www.seattletimes.com/sports">Seattle Times Sports</a>
+       </div>
+       <div class="copyright">Copyright 2016 The Seattle Times</div>
+     </div>
+
+     <div class="bottom-ad"><%= t.include("partials/_ad.html", { type: "bannerBottom" }) %>
+     </div>
+
+      </div>
+    </div>
+
+    <footer>
+      <a class="logo" href="http://seattletimes.com">
+        <img src="./assets/st-logo.png">
+      </a>
+      <a class="share-bottom"></a>
+    </footer>
+
+    <script>
+      var chipsData = <%= JSON.stringify(json.ChipsList2017_Sheet1) %>;
+    </script>
+    <script src="app.js"></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_adFoot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>
